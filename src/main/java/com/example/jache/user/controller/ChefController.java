@@ -132,7 +132,7 @@ public class ChefController {
     @PutMapping("/user/my/update/img")
     public ResponseEntity<ApiResponse<ChefDto.UpdateImgResDto>> updateMyImg(
             @RequestPart(value = "myImg")MultipartFile multipartFile, Authentication authentication
-            ){
+    ){
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         ImgUploadDto receipeImgUploadDto = new ImgUploadDto();
         receipeImgUploadDto.setFile(multipartFile);

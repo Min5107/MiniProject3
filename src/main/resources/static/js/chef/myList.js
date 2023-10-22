@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     const textDiv = document.createElement("div");
                     textDiv.className = "main-item-text";
 
-                    /*const heartDiv = document.createElement("div");
+                    const heartDiv = document.createElement("div");
                     heartDiv.className = "heart";
 
                     const iTag = document.createElement("i");
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     iTag.setAttribute("aria-hidden", "true");
 
-                    heartDiv.appendChild(iTag);*/
+                    heartDiv.appendChild(iTag);
 
                     const titleDiv = document.createElement("div");
                     titleDiv.className = "receipeTitle";
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     chefDiv.innerHTML = `<p>${receipe.chefName}</p>`;
                     console.log(chefDiv.innerHTML);
 
-                    // textDiv.appendChild(heartDiv);
+                    textDiv.appendChild(heartDiv);
                     textDiv.appendChild(titleDiv);
                     textDiv.appendChild(categoryDiv);
                     textDiv.appendChild(recipeDiv);
@@ -205,8 +205,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     receipeBoxContainer.appendChild(receipeDiv);
                 }
-               /*updateContainersAndHearts();
-                toggleItems();*/
+               updateContainersAndHearts();
+                toggleItems();
             })
             .catch(error => {
                 console.error('There was an error!', error);

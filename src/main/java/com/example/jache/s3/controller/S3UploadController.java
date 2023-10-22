@@ -20,6 +20,4 @@ public class S3UploadController {
 
     @Value("${cloud.aws.s3.bucket}")
     private String bucket;
-
-
 }

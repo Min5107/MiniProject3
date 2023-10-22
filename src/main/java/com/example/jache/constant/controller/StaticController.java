@@ -41,39 +41,29 @@ public class StaticController {
     public String loginPage(){
         return "chef/login";
     }
-    @RequestMapping("/register")
-    public String register(){
-
-        return "chef/register";
-    }
 
     @RequestMapping("/chef/infoEdit")
     public String infoEdit(){
-
         return "chef/infoEdit";
     }
 
     @RequestMapping("/chef/likeReceipe")
     public String likereceipe(){
-
         return "chef/likeReceipe";
     }
 
     @RequestMapping("/chef/myList")
     public String myList() {
-
         return "chef/myList";
     }
 
     @GetMapping("/chef/profilePage")
     public String profilePage() {
-
         return "chef/profilePage";
     }
 
     @RequestMapping("/receipe/detailReceipe")
     public String detailReceipe(){
-
         return "receipe/detailReceipe";
     }
 
@@ -94,16 +84,12 @@ public class StaticController {
     public String chefRegister(){
         return "chef/register";
     }
+
     @RequestMapping("/receipe/register")
     public String receipeRegister(){
         return "receipe/receipe-form";
     }
 
-/*    @RequestMapping("/receipe/main-receipe-form")
-    public String mainReceipeForm(@PathVariable Long receipeId, Model model){
-        model.addAttribute("receipeId", receipeId);
-        return "receipe/main-receipe-form";
-    }*/
     @RequestMapping("/receipe/receipe-form/{receipeId}")
     public String mainReceipeForm(@PathVariable Long receipeId, Model model){
         model.addAttribute("receipeId", receipeId);

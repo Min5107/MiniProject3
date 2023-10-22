@@ -15,7 +15,7 @@
     margin-left: 20rem;
 }
 
-.info #chefName {
+.info .chefName {
     width: 20rem;
     height: 1.5rem;
     margin-left: 1rem;
@@ -81,13 +81,6 @@ img{
     height: 70px;
     cursor: pointer;
 }
-
- textarea {
-     width: 20rem;
-     height: 5rem;
-     margin-left: 2rem;
-     resize: none;
- }
 
  #buttonContainer {
      display: grid;

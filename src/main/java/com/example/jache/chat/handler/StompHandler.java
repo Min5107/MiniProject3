@@ -17,7 +17,7 @@ public class StompHandler implements ChannelInterceptor {
 
     private final JwtTokenUtil jwtTokenUtil;
 
-    //publisher 가 send 하기 전에 일어님
+    //publisher 가 send 하기 전에 일어남
     @Override
     public Message<?> preSend(Message<?> message, MessageChannel channel) {
         /**

@@ -11,65 +11,65 @@
     <title> 레시피 상세 페이지 </title>
 </head>
 <body>
-    <div th:replace="~{/common/header :: headerFragment}"></div>
-    <div th:replace="~{/common/nav :: navFragment}"></div>
-    <div id = "container">
-        <div class = "returnBtn">
-            <label> 이전 목록으로 돌아가기</label>
-            <button th:onclick="back()"> ◀ </button>
-        </div><br>
-        <form class = "receipe">
-            <button id="receipe-delete" class="hidden">삭제</button>
-            <div class = "mainTop">
-                <div class = "thumbnail">
-                    <div class = "thumImg">
-                        <!--사진 경로 수정 -->
-                        <img src="https://3rdprojectbucket.s3.ap-northeast-2.amazonaws.com/initial/receipeInitial.jpg" alt="chef-img" id="receipe-img">
-                    </div>
+<div th:replace="~{/common/header :: headerFragment}"></div>
+<div th:replace="~{/common/nav :: navFragment}"></div>
+<div id = "container">
+    <div class = "returnBtn">
+        <label> 이전 목록으로 돌아가기</label>
+        <button th:onclick="back()"> ◀ </button>
+    </div><br>
+    <form class = "receipe">
+        <button id="receipe-delete" class="hidden">삭제</button>
+        <div class = "mainTop">
+            <div class = "thumbnail">
+                <div class = "thumImg">
+                    <!--사진 경로 수정 -->
+                    <img src="https://3rdprojectbucket.s3.ap-northeast-2.amazonaws.com/initial/receipeInitial.jpg" alt="chef-img" id="receipe-img">
                 </div>
-                <div class = "title-cate">
-                    <div class = "title">
-                        <label> 제목 </label><br>
-                        <!-- -->
-                        <input type="text" name="제목" id="receipe-title" disabled>
-                    </div><br>
+            </div>
+            <div class = "title-cate">
+                <div class = "title">
+                    <label> 제목 </label><br>
+                    <!-- -->
+                    <input type="text" name="제목" id="receipe-title" disabled>
+                </div><br>
 
-                    <div class = "writer">
-                        <label> 작성자 </label><br>
-                        <input type="text" name="작성자" id="receipe-writer" disabled>
-                    </div><br>
+                <div class = "writer">
+                    <label> 작성자 </label><br>
+                    <input type="text" name="작성자" id="receipe-writer" disabled>
+                </div><br>
 
-                    <div class = "cate">
-                        <label> 카테고리 </label>
-                        <input type="text" name="카테고리" id="receipe-theme" disabled>
-                    </div>
-                    <div class = "intro">
-                        <label> 레시피 소개 </label>
-                        <input type="text" name="레시피 소개" id="receipe-intro" disabled>
-                    </div>
-                    <p class = "like" >
-                        <img class="heart" th:src="@{/static/img/like_empty.png}" alt="heart">
-                        <img class="heart-liked" th:src="@{/static/img/like_click.png}" alt="heart-liked" hidden>
-                    </p>
-
+                <div class = "cate">
+                    <label> 카테고리 </label>
+                    <input type="text" name="카테고리" id="receipe-theme" disabled>
                 </div>
+                <div class = "intro">
+                    <label> 레시피 소개 </label>
+                    <input type="text" name="레시피 소개" id="receipe-intro" disabled>
+                </div>
+                <p class = "like" >
+                    <img class="heart" th:src="@{/static/img/like_empty.png}" alt="heart">
+                    <img class="heart-liked" th:src="@{/static/img/like_click.png}" alt="heart-liked" hidden>
+                </p>
 
             </div>
-            <div id="hr-div">
-                <hr>
-            </div>
 
-            <div class="form-datail-item-container">
-                <div class="form-container-ingredientitems">
+        </div>
+        <div id="hr-div">
+            <hr>
+        </div>
 
-                </div>
-                <hr>
-                <div class="form-container-orderitems">
+        <div class="form-datail-item-container">
+            <div class="form-container-ingredientitems">
 
             </div>
-        </form>
-    </div>
-   <div th:replace="~{/common/footer :: footerFragment}"></div>
+            <hr>
+            <div class="form-container-orderitems">
+
+            </div>
+    </form>
+</div>
+<div th:replace="~{/common/footer :: footerFragment}"></div>
 </body>
 <script th:src="@{/static/js/adapter.js}"></script>
 <script th:src="@{/static/js/receipe/detailReceipe.js}"></script>

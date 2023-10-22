@@ -11,7 +11,7 @@
     src: url("/static/fonts/NanumSquareB.otf") format("opentype"); /* 폰트파일 불러오기 */
 }
 
-/* 공통 기능 관리 */ 
+/* 공통 기능 관리 */
 a{
     text-decoration: none;
     color: black;
@@ -34,7 +34,7 @@ button:hover{
 
 
 
-/* Font 관리 */ 
+/* Font 관리 */
 *{
     font-family: "namu";
 }

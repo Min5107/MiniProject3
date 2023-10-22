@@ -7,7 +7,7 @@ public interface ChefService {
 
     ChefDto.SignUpResponseDto register(ChefDto.SignUpRequestDto signup);
 
-    boolean checkDuplicateCheckName(String chefname);
+    boolean checkDuplicateCheckName(String chefName);
     boolean checkDuplicateEmail(String email);
     boolean checkAuthenticateNumber(String authenticateCode);
 

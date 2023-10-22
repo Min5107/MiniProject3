@@ -24,9 +24,6 @@ public enum CustomResponseStatus {
     WRONG_INGREDIENT_ID(false,213,"레시피에 해당하지 않는 재료 아이디입니다."),
     WRONG_ORDERS_ID(false,214,"레시피에 해당하지 않는 주문순서 입니다."),
 
-
-
-
     //300 unauthorized
     EXPIRED_TOKEN(false,300,"만료된 토큰입니다."),
     UNAUTHORIZED_TOKEN(false,301,"권한이 없습니다."),

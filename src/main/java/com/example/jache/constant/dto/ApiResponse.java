@@ -56,13 +56,11 @@ public class ApiResponse<T> {
 
     // 예외 발생으로 API 호출 실패시 반환
 
-
     private ApiResponse(CustomResponseStatus status) {
         this.isSuccess = status.isSuccess();
         this.code = status.getCode();
         this.message = status.getMessage();
     }
-
 
     public static ApiResponse<String> createError(CustomResponseStatus status) {
         return new ApiResponse<>(status.isSuccess(), status.getCode(),status.getMessage(), null);

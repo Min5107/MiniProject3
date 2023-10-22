@@ -38,10 +38,10 @@ public class LoveServiceImpl implements LoveService {
                 () -> new CustomException(CustomResponseStatus.USER_NOT_FOUND)
         );
         Love newLove = Love.builder()
-                    .receipe(receipe)
-                    .chef(chef)
-                    .status("y")
-                    .build();
+                .receipe(receipe)
+                .chef(chef)
+                .status("y")
+                .build();
         loveRepository.save(newLove);
         receipe.addCount();
         receipeRepository.save(receipe);

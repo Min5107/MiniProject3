@@ -53,8 +53,8 @@ public class ChatService {
     public ChatDto.ChatRoomResDto createRoom(String roomName) {
 
         ChatRoom room = ChatRoom.builder()
-                        .chatRoomName(roomName)
-                                .build();
+                .chatRoomName(roomName)
+                .build();
         log.info(room.toString());
         roomRepository.save(room);
 
