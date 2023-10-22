@@ -1,7 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-    // 이곳에 사용자 아이디와 토큰을 설정하세요
-    const chefNameInput = document.getElementById("chefName"); // 현재 사용자의 아이디로 설정
+    const chefNameInput = document.getElementById("chefName");
     const chefDetailTextArea = document.getElementById("chefDetail");
     const chefImg = document.getElementById("chefImg");
 
@@ -22,33 +20,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                // 데이터에서 값을 추출합니다.
                 const apiChefName = data.data.chefName;
-                let chefDetial = data.data.chefDetial;
-                const chefImgUrl = data.data.chefImgUrl;
+                const apiChefDetail = data.data.chefDetail;
 
-                // 값들을 DOM 요소에 할당합니다.
+                // 값들을 DOM 요소에 할당
                 chefNameInput.textContent = apiChefName;
-                chefDetailTextArea.textContent = chefDetial;
-                chefImg.src = chefImgUrl;
+                chefDetailTextArea.textContent = apiChefDetail;
                 const chefName = chefNameInput.innerText;
                 // 사용자 아이디 비교
                 updateButtons(apiChefName, chefName);
-                console.log(chefName);
-                console.log(apiChefName);
             })
             .catch(error => {
                 console.error('API 호출 중 오류 발생:', error);
-            });
+            })
     }
-// 버튼 업데이트 함수
-function updateButtons(apiChefName, chefName) {
-    const menuButtons = document.getElementById("buttonContainer");
-    menuButtons.forEach(button => {
+
+    // 버튼 업데이트 함수
+    function updateButtons(apiChefName, chefName) {
         const menuButtonMyList = document.getElementById('menuButtonMyList');
         const menuButtonLikeRecipe = document.getElementById('menuButtonLikeRecipe');
         const menuButtonChat = document.getElementById('menuButtonChat');
         const menuButtonInfoEdit = document.getElementById('menuButtonInfoEdit');
+
         if (apiChefName == chefName) {
             // 현재 사용자와 API에서 가져온 사용자가 동일한 경우
             // 내가 쓴 글, 찜한 레시피, 나의 정보 공유, 내 정보 수정 버튼을 표시
@@ -63,6 +56,5 @@ function updateButtons(apiChefName, chefName) {
             menuButtonChat.style.display = "block";
             menuButtonInfoEdit.style.display = "none";
         }
-    });
-}
+    }
 });
