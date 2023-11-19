@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="mainReceipeForm">
+    <div class="receipe-form-container">
+        <h2>레시피 작성</h2>
+        <div id="receipe-form">
+            <div class="form-container-items">
+                <label id="receipe-form-option-label">카테고리</label>
+                <select id="receipe-form-option-select">
+                    <option value="S">3분 요리</option>
+                    <option value="A">냉털 요리</option>
+                    <option value="O">원팬 요리</option>
+                    <option value="P">파티 요리</option>
+                    <option value="T">자취 꿀팁</option>
+                </select>
+            </div>
+            <div class="form-container-items">
+                <label id="receipe-form-title">제목</label>
+                <input type="text" id="receipe-form-title-id" class="receipe-form-title" />
+            </div>
+            <div class="form-container-items">
+                <label id="receipe-form-overview-label">요약설명</label>
+                <input type="text" id="receipe-form-overview-id"  class="receipe-form-overview" />
+            </div>
+            <div class="form-container-items">
+                <label  id="receipe-form-material-label">재료</label>
+                <input type="text" class="receipe-form-material"  placeholder="재료명"/>
+                <input type="text" class="receipe-form-material-unit"  placeholder="단위"/>
+                <button id="receipe-form-material-button">추가</button>
+            </div>
+            <div class="form-container-items">
+                <label  id="receipe-form-sequence-label">요리순서</label>
+                <textarea name="sequence" class="receipe-form-sequence"  cols="10" rows="10"></textarea>
+                <img class="receipe-form-sequence-img" />
+                <button id="receipe-form-sequence-add-button">추가</button>
+            </div>
+            <div class="form-container-items">
+                <label  id="receipe-form-media-label">사진 및 동영상</label>
+                <input id="receipe-form-media-id" class="receipe-form-media" type="file" />
+                <img class="receipe-form-media-img" />
+            </div>
+
+            <div class="receipe-form-button">
+                <button id="submit-button" type="button">저장</button>
+                <button type="reset">취소</button>
+            </div>
+        </div>
+        <div id="sequence-modal" class="sequence-modal">
+            <div class="modal-content">
+                <div class="modal-contents">
+                    <h2>요리 순서 추가</h2>
+                    <textarea id="sequence-modal-content" cols="30" rows="5" placeholder="요리 순서 설명..." ></textarea>
+                    <input id="sequence-modal-image" type="file" accept="image/*"  />
+                </div>
+                <div class="modal-buttons">
+                    <button id="sequence-modal-add">등록</button>
+                    <button id="sequence-modal-close">취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>

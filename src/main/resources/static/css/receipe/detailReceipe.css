@@ -1,0 +1,160 @@
+#container {
+    display: grid;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.receipe {
+    display: grid;
+    width: 650px;
+    border-radius: 10px;
+    border: solid #e3e5e8;
+    box-shadow: 0.5px 0.5px 1px 0px black;
+    padding: 1.25rem;
+    justify-content: start;
+    justify-items: start;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+#receipe-delete{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.7rem;
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 38rem;
+}
+
+.mainTop {
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thumImg{
+    width: 8rem;
+    height: 8rem;
+}
+
+.thumImg img{
+    width: 8rem;
+    height: 8rem;
+}
+
+.title-cate {
+    display: flex;
+    flex-flow: column;
+    margin: 3rem;
+    margin-top: 5rem;
+}
+
+.title-cate input{
+    margin-top: 0.3rem;
+    width: 20rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+
+.intro{
+    margin-top: 1rem;
+}
+
+.like {
+    text-align: end;
+    margin-right : 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.like img {
+    width: 30px;
+    height: 30px;
+}
+
+.count {
+    font-size: 15px;
+}
+
+.ingredient{
+    text-align: center;
+}
+
+.form-container-orderitems {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 항목들을 중앙에 정렬 */
+    gap: 1rem;
+    width: 100%;
+    resize: none;
+    flex-direction: column;
+}
+
+.form-datail-item-container{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 95%;
+
+}
+
+.form-datail-item-container label{
+    font-size: 1.3rem;
+}
+
+#hr-div hr{
+    width: 39rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.form-container-ingredientitems {
+    margin: 0 auto;
+    display: flex;
+    /* 항목들을 중앙에 정렬 */
+    gap: 1rem;
+    width: 80%;
+    flex-direction: column;
+}
+
+.ingredient-div{
+    margin: 0.5rem auto;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.ingredient-div input{
+    width: 10rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.order-div{
+    margin-bottom: 1rem;
+}
+
+.receipe-detail-sequence-img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: fill;
+}
+
+.receipe-detail-sequence {
+    width: 25rem;
+    margin-left: 2rem;
+    height: 10rem;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.8rem;
+    resize: none;
+}

@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="chatbotFragment">
+    <div id="main-chatbot-html">
+        <div class="main-chatbot-container">
+
+            <div class="main-chatbot-container-items">
+                <div class="main-chatbot-print">
+                    <textarea id="chatbotTextarea" cols="30" rows="10" oninput="adjustTextareaHeight(this)" disabled></textarea>
+                </div>
+                <div class="main-chatbot-input">
+                    <input id="main-chatbot-sendfield" type="text" placeholder="레시피로 만들 음식명을 적어주세요!">
+                    <button id="main-chatbot-sendButton" type="button">전송</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>

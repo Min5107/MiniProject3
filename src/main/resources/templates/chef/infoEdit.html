@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/static/css/common/header.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/static/css/common/footer.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/static/css/common/style.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/static/css/common/aside.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/static/css/common/sideMenu.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/static/css/chef/infoEdit.css}" type="text/css">
+    <title> 수정페이지 </title>
+</head>
+<body>
+    <div th:replace="~{/common/header :: headerFragment}"></div>
+    <hr>
+   <div id = "container">
+        <div th:replace="~{/common/sideMenu :: sidebarFragment}"></div>
+        <div class = "infoEdit">
+            <h2>나의 정보</h2>
+            <hr>
+<!--            <form th:action = "@{}" method="post" class="info" enctype="multipart/form-data">-->
+            <form class="info">
+                <div class="chefImg">
+                    <input type="file" id="img" accept="image/*">
+                    <img src="" id="chefImgUrl">
+                    <p>
+                        <button id="modifyImg">수정</button>
+                        <button id="deleteImg">삭제</button>
+                    </p>
+                </div>
+
+                <div class = "box">
+                    <div class = "chefId">
+                        <label for = "chefName"> 사용자 아이디 </label>
+                        <p type="text" id="chefName" ></p>
+                    </div><br>
+                    <div class = "chefInfo">
+                        <div class = "infoLayout">
+                            <label for = "chefName" > 내 소개<br> </label>
+                        </div>
+                        <textarea id="chefInfo" name="chefInfo" > </textarea>
+                        <!--th:value="${chefDetail}" th:text="${chef.chefDetail}"-->
+                    </div>
+                    <div class = "editBtn">
+                        <button id="modify"> 수정 </button>
+                            <!-- 경로 설정시 참고 th:onclick="|location.href='@{|/review/modify/${review.reviewPostId}|}'|">수정</button>-->
+                        <button type="button" th:onclick= "|location.href='@{/chef/profilePage}'|"> 취소 </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+   </div>
+   <div th:replace="~{/common/footer :: footerFragment}"></div>
+</body>
+<script th:src="@{/static/js/adapter.js}"></script>
+<script th:src="@{/static/js/chef/infoEdit.js}"></script>
+</html>
